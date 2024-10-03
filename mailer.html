@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailerLite Hero</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- Googlefont CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/fav.png"/>
+    
+    
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height:100%;
+            font-family: "Inter", sans-serif!important;
+            font-optical-sizing: auto;
+            font-style: normal;
+            
+        }
+
+
+        .inner-column {
+            margin-bottom: 15px; /* Espacio entre columnas internas */
+        }
+        .flex-center {
+            display: flex;
+            flex-direction: column; /* Apila las filas verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            height: 100%; /* Asegura que ocupe el 100% de la altura */
+        }
+
+        .row{
+        width: 100%;
+        margin:0px;
+        }
+
+        h1{
+        font-size: 5em;
+        font-weight: 700;
+        position:relative;
+         z-index: 3;
+         animation: fadeInFromTop 1.5s ease-out forwards;
+
+        }
+
+
+        @keyframes fadeInFromTop {
+            0% {
+                transform: translateY(-50px); /* Comienza 50px arriba */
+                opacity: 0; /* Comienza invisible */
+            }
+            100% {
+                transform: translateY(0); /* Termina en su posición original */
+                opacity: 1; /* Termina visible */
+            }
+        }
+
+
+
+        
+
+
+        .fade-in-scale {
+        transform: scale(0.5); 
+        animation: fadeIn 2s forwards;
+         }
+
+        @keyframes fadeIn {
+            to {
+                transform: scale(1); 
+            }
+        }
+
+
+        h5{
+
+            font-size:1em;
+            font-weight: 700;
+        }
+
+        .btn-primary{
+            color: #fff;
+            background-color: #21C16C;
+            border-color: #21C16C;
+             font-weight: 600;
+        }
+
+        .btn-primary:hover{
+            background-color: black;
+            border-color: black;
+        }
+
+        .btn-secondary {
+        color: black;
+        background-color: white;
+        border-color: 707880;
+        transition: all .2s ease-in-out; 
+        margin-left:20px;
+        font-weight: 300;
+        }
+
+        .btn-secondary:hover {
+        color: black;
+        background-color: white;
+        border-color: 707880;
+        transform: scale(1.1);
+
+        }
+
+        .bg-dark{
+        background-color: black;
+        color: white;
+
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            transition: all .2s ease-in-out;
+            cursor: pointer; 
+            animation: fadeIn 1.5s ease-out forwards;
+
+        }
+
+        @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        }
+
+        .card:hover {
+        transform: scale(1.1);
+
+        }
+
+        .card-body {
+            border-radius: 20px 20px 0 0;
+            background-color: white;
+            
+        }
+        .text-container {
+            border-radius: 0 0 20px 20px;
+            border: 1px solid #d3d3d3;
+           
+            padding: 15px;
+        }
+
+        .card-text{
+
+        font-size: 0.8em;
+
+        }
+
+       
+
+        .bg-dark{
+            background-color: black!important;
+            border-radius: 10px;
+        }
+    
+
+        .credit{
+
+            font-size: 0.8em;
+            margin:30px 0px 20px 0px;
+            font-weight: 300;
+            
+        }
+
+        #description{
+            margin:30px 200px 40px 0px;
+            font-weight: 300;
+        }
+
+        .second-services p{
+            font-size:0.8em;
+            font-weight: 400;
+        }
+
+        .second-services h5{
+            font-size:0.9em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .flecha{
+        transition: all .2s ease-in; 
+        cursor: pointer;
+        }
+
+        .second-services h5:hover .flecha{
+       
+        transform: translateX(10px);
+
+        }
+
+        #card1 .card{
+            width:70%;
+            z-index:120!important;
+            margin-top:15%!important;
+            margin-left:30%!important;
+            position:relative;
+        }
+
+        #card2 .card{
+            width:70%;
+            z-index:8;
+            margin-bottom:20%!important;
+            margin-left:30%!important;
+            position:relative;
+
+        }
+
+        #card3 .card{
+            width:100%;
+            z-index:8;
+            position:relative;
+            
+            
+        }
+
+        #card4 .card{
+            width:80%;
+            z-index:120!important;
+            position:relative;
+           
+        }
+
+        #elipse{
+
+            z-index:10;
+        }
+      
+       .underline {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+       
+        }
+
+        .underline::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 40px;
+        border-radius: 10px;
+        width: 100%;
+        background-color: #D8F5E7;
+        transform: translateX(-100%);
+        animation: slideIn 2s forwards;
+        z-index: -1;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                 
+            }
+        }
+
+        
+
+    
+
+
+        /* Responsive */
+
+
+        @media (max-width: 1020px){
+
+            h1{
+                
+                font-size: 3.5em;
+            }
+
+            
+
+        }
+
+        @media (max-width: 950px){
+
+            .col-md-6{
+               width: 100%;
+            }
+
+            #intro{
+                margin:auto;
+                text-align: center;
+            }
+
+            #description{
+                margin:20px 150px 30px 150px;
+            }
+
+            h1{
+                margin-top:5%;
+            }
+
+            
+        }
+
+
+
+        @media (max-width: 768px){
+
+           
+
+            #description{
+                margin:20px 90px 30px 90px;
+            }
+
+        }
+
+
+
+        @media (max-width: 560px){
+
+            h1{
+                margin-top:10%;
+                font-size: 3.5em;
+            }
+
+            #description{
+
+                font-size: 0.8em;
+                margin:20px 30px 30px 30px;
+
+            }
+
+            .credit{
+               
+                font-size: 0.7em;
+            }
+
+            
+        #card1 .card{
+            width:100%;
+            margin-top:20%!important;
+            margin-left:0%!important;
+            padding-left:1em;
+            
+            
+        }
+
+        #card2 .card{
+            width:100%;
+            margin-bottom:20%!important;
+            margin-left:0%!important;
+            padding-left:1em;
+            padding-right:1em;
+            
+
+        }
+
+        #card3 .card{
+            width:100%;
+            margin-top:50%!important;
+           
+            
+            
+        }
+
+        #card4 .card{
+            width:100%;
+
+           
+           
+        }
+
+        .col-4{
+            width: 100%;
+        }
+
+        }
+
+        .px-5{
+                padding-right: 1rem !important;
+                padding-left: 1rem !important;
+            }
+
+
+        @media (max-width: 420px){
+
+
+
+            h1{
+                margin-top:10%;
+                font-size: 2.8em;
+            }
+
+            h2{
+                font-size: 1.2em;
+            }
+
+            #description{
+
+                font-size: 0.8em;
+                margin:20px 0px 30px 0px;
+
+            }
+
+            .credit{
+               
+                font-size: 0.7em;
+                margin:30px 0px 40px 0px;
+            }
+        
+
+            .px-5{
+                padding-right: 1rem !important;
+                padding-left: 1rem !important;
+            }
+
+            .col-6{
+
+                width: 100%;
+            }
+
+            #elipse{
+                z-index: -1;
+                
+            }
+
+            .start-50{
+
+                left:0%!important;
+
+            }
+
+            .top-50{
+                top:0%!important;
+
+            }
+            
+        #card1 .card{
+            width:70%;
+            margin-top:10%!important;
+            margin-left:0%!important;
+            margin:auto!important;
+            padding-left: 0em;
+            
+            
+        }
+
+        #card2 .card{
+            width:75%;
+            margin-bottom:0%!important;
+            margin-left:0%!important;
+            margin:auto!important;
+            
+            
+            
+
+        }
+
+        #card3 .card{
+            width:100%;
+            margin-top:0%!important;
+            margin:auto!important;
+           
+            
+            
+        }
+
+        #card4 .card{
+            width:80%;
+            margin:auto!important;
+            
+           
+            
+            
+        }
+
+        @media (max-width: 360px){
+
+            #card1 .card{
+            width:80%;
+            margin-top:10%!important;
+            margin-left:0%!important;
+            margin:auto!important;
+            
+            
+        }
+
+        #card2 .card{
+            width:90%;
+            margin-bottom:0%!important;
+            margin-left:0%!important;
+            margin:auto!important;
+            
+            
+            
+
+        }
+
+        #card3 .card{
+            width:100%;
+            margin-top:0%!important;
+            margin:auto!important;
+           
+            
+            
+        }
+
+        #card4 .card{
+            width:90%;
+            margin:auto!important;
+            
+           
+            
+            
+        }
+
+        .btn-secondary{
+            margin-left:0px;
+         
+        }
+
+        }
+
+        }
+
+    </style>
+</head>
+<body class="inter">
+
+    <div id="big-container" class="container-fluid flex-center px-5 d-flex align-items-center">
+        <!-- Primera fila con dos columnas -->
+        <div class="row align-items-center">
+            <div id="intro" class="col-md-6">
+                <h1>Don’t worry<br> about <span class="underline">email</span><br> <span class="underline">marketing</span></h1>
+                <h2>Your audience will love it</h2>
+                <p id="description">Digital marketing tools to grow your audience faster and drive revenue smarter. Backed by 24/7 award-winning support.</p>
+                <div>
+                    <button class="btn btn-primary">Sign up free</button>
+                    <button class="btn btn-secondary">Watch demo</button>
+                </div>
+                <p class="credit">Get a free 30-day trial of premium features | No credit card required</p>
+            </div>
+            <div class="col-md-6 position-relative">
+
+                <!-- Elipse -->
+
+                
+
+                    <img id="elipse" src="img/circle.svg" class="position-absolute top-50 start-50 translate-middle" alt="elipse">
+
+                
+
+                <!-- Cards -->
+                
+                <div id="section-cards" class="row align-items-center center">
+                    <div class="col-6 inner-column">
+                        <div class="p-2 "  id="card1" >
+                            <div class="card mx-auto">
+                                <img src="img/newsletter-card.png" class="card-img-top" alt="card1">
+                                <div class="card-body text-container">
+                                    <h5 class="card-title">Email campaigns</h5>
+                                    <p class="card-text">Create engaging, dynamic emails in minutes with our intuitive drag & drop email editor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 inner-column">
+                        <div class="p-2" id="card2">
+            
+                            <div class="card mx-auto">
+                                <img id="card2" src="img/results-card.png" class="card-img-top" alt="card2">
+                                <div class="card-body text-container">
+                                    <h5 class="card-title">Track your results</h5>
+                                    <p class="card-text">Monitor performance to find what works best for your business.</p>
+                                </div>
+                            </div>
+
+                    </div>
+                    </div>
+                    <div class="row align-items-center">
+                    <div class="col-6 inner-column">
+                        <div class="p-2" id="card3">
+
+                            <div class="card mx-auto">
+                                <img id="card3" src="img/digital-products-card.png" class="card-img-top" alt="card3">
+                                <div class="card-body text-container">
+                                    <h5 class="card-title">Sell digital products</h5>
+                                    <p class="card-text">Sell ebooks, downloads, or whatever else will help subscribers.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-6 inner-column">
+                        <div class="p-2" id="card4">
+
+                            <div class="card mx-auto">
+                                <img id="card4" src="img/automations-card.png" class="card-img-top" alt="card4">
+                                <div class="card-body text-container">
+                                    <h5 class="card-title">Automations</h5>
+                                    <p class="card-text">Send perfectly-timed and targeted emails automatically.</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    
+    </div>
+
+    <div class="container-fluid p-0 second-services mb-5">
+        <!-- Segunda fila -->
+        <div class="row no-gutters mt-3 bg-dark p-4">
+            <div class="col-4">
+                <div class="px-3 pt-4 pb-2">
+                    
+                <h5>Websites  <i class="fa-solid fa-arrow-right flecha"></i></h5>
+                <p>Build stunning websites on your own and let your business shine.</p>
+
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="px-3 pt-4 pb-2">
+
+                    <h5>Sign up forms  <i class="fa-solid fa-arrow-right flecha"></i></h5>
+                    <p>Grow your audience with highly-effective subscribe forms.</p>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="px-3 pt-4 pb-2">
+
+                    <h5>Paid newsletter subscriptions  <i class="fa-solid fa-arrow-right flecha"></i></h5>
+                    <p>Easily set up recurring payments to offer paid subscriptions.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS y dependencias (opcional) -->
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
